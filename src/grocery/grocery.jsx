@@ -16,20 +16,26 @@ const db ={
     title:data,
     status:false,
 }
-setGroce([...groce,data])
+setGroce([...groce,db])
 
     }
-    // const deleteGroce=(id)=>{
-    //     const todos = groce.filter(item => item.id != id);
-    //     setGroce(...todos);
-    // }
+    const deleteGroce=(id)=>{
+
+console.log(id,"idniv")
+    const remove = groce.filter((todo)=>{return todo.id != id})
+
+    setGroce([...remove])
+
+    
+    }
+
    
 return(
     <div>
         <Groceinput aadGroce={aadGroce}/>
         {groce.map((e)=>{return (
         <>
-          <Grocelist Groce={e}/>
+          <Grocelist key={e.id} Groce={e} deleteGroce={deleteGroce}/>
 {/* <button onClick={()=>{deleteGroce(e)}}>deleletee</button> */}
 
 
