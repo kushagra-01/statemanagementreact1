@@ -22,7 +22,7 @@ setGroce([...groce,db])
     const deleteGroce=(id)=>{
 
 console.log(id,"idniv")
-    const remove = groce.filter((todo)=>{return todo.id != id})
+    const remove = groce.filter((todo)=>{return todo.id !== id})
 
     setGroce([...remove])
 
@@ -35,8 +35,8 @@ return(
         <Groceinput aadGroce={aadGroce}/>
         {groce.map((e)=>{return (
         <>
-          <Grocelist key={e.id} Groce={e} deleteGroce={deleteGroce}/>
-{/* <button onClick={()=>{deleteGroce(e)}}>deleletee</button> */}
+          <Grocelist key={e.id} panther={e} deleteGroce={deleteGroce}/>
+
 
 
         </>

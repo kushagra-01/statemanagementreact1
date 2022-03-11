@@ -1,7 +1,7 @@
 const { useState } = require("react");
 
 export const Groceinput =({aadGroce})=>{
-    const [text,SetText] =useState("")
+    const [Text,SetText] =useState("")
 
     return(
         <div>
@@ -13,7 +13,8 @@ export const Groceinput =({aadGroce})=>{
 
           <button onClick={()=>{
 
-              aadGroce(text)
+              aadGroce(Text)
+            
             
           }}>add Grocery Data
           </button>
